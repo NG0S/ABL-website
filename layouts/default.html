@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @item[:title] %></title>
+    <link rel="stylesheet" href="<%= @items['/stylesheet/'].path %>">
+
+    <!-- you don't need to keep this, but it's cool for stats! -->
+    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+  </head>
+  <body>
+    <div id="main">
+      <div>
+        <%= yield %>
+      </div>
+      <div id="footer">
+        <h2>A propos</h2>
+        <p>Ce site web à été généré grace au framework <a href="http://nanoc.ws/">nanoc</a> (CC-BY-SA) et l'entièreté du code source permettant de le générer est <a href="https://github.com/yoann-dufresne/ABL-website">disponible sur github</a></p>
+      </div>
+    </div>
+    <div id="sidebar">
+      <h2>ABL</h2>
+      <ul>
+        <li><a href="index.html#who">Qui sommes nous</a></li>
+        <li><a href="index.html#where">L'espace bidouille</a></li>
+        <li><a href="index.html#how">Nous contacter</a></li>
+        <li>Le wiki (en construction)</li>
+      </ul>
+      <h2>Projets</h2>
+      <ul>
+        <li><a href="https://github.com/yoann-dufresne/Spaceship_node">Spaceship</a></li>
+        <li>Carrés potagers libres</li>
+        <li>Puzzles Escheriens</li>
+        <li>Cube de LEDs</li>
+      </ul>
+    </div>
+  </body>
+</html>
